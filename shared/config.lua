@@ -95,6 +95,8 @@ Config.LogPerms = {
 	},
 	['police'] = {
 		[4] = true,
+        [5] = true,
+        [6] = true,
 	},
     ['bcso'] = {
 		[4] = true,
@@ -122,6 +124,8 @@ Config.RemoveIncidentPerms = {
 	},
 	['police'] = {
 		[4] = true,
+        [5] = true,
+        [6] = true,
 	},
     ['bcso'] = {
 		[4] = true,
@@ -149,6 +153,8 @@ Config.RemoveReportPerms = {
 	},
 	['police'] = {
 		[4] = true,
+        [5] = true,
+        [6] = true,
 	},
     ['bcso'] = {
 		[4] = true,
@@ -176,6 +182,8 @@ Config.RemoveWeaponsPerms = {
 	},
 	['police'] = {
 		[4] = true,
+        [5] = true,
+        [6] = true,
 	},
     ['bcso'] = {
 		[4] = true,
