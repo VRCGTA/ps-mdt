@@ -3,7 +3,7 @@ Config = Config or {}
 Config.UsingPsHousing = true
 Config.UsingDefaultQBApartments = false
 Config.OnlyShowOnDuty = true
-Config.UseCQCMugshot = true
+Config.UseCQCMugshot = false
 
 -- Front, Back Side. Use 4 for both sides, we recommend leaving at 1 for default.
 Config.MugPhotos = 1
