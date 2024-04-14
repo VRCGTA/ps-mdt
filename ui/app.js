@@ -5289,7 +5289,7 @@ window.addEventListener("message", function (event) {
         .val(linkedreport)
         .attr("disabled", "disabled");
       $(".impound-fee")
-        .val("$" + fee)
+        .val("𝕍" + fee)
         .attr("disabled", "disabled");
 
       if (table.paid === 1) {

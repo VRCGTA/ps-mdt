@@ -1854,7 +1854,7 @@ local function giveCitationItem(src, citizenId, fine, incidentId)
 		info = {
 			description = {
 				'Citizen ID: ' .. citizenId '  \n',
-				'Fine: $ ' .. fine '  \n',
+				'Fine: 𝕍 ' .. fine '  \n',
 				'Date: ' .. date '  \n',
 				'Incitent ID: # ' .. incidentId '  \n',
 				'Officer: ' .. OfficerFullName
@@ -1863,7 +1863,7 @@ local function giveCitationItem(src, citizenId, fine, incidentId)
 	else
 		info = {
 			citizenId = citizenId,
-			fine = "$"..fine,
+			fine = "𝕍"..fine,
 			date = date,
 			incidentId = "#"..incidentId,
 			officer = OfficerFullName,
@@ -1875,7 +1875,7 @@ local function giveCitationItem(src, citizenId, fine, incidentId)
 		exports['okokBanking']:AddMoney(Officer.PlayerData.job.name, fine) 
 	end
 	TriggerClientEvent('inventory:client:ItemBox', Player.PlayerData.source, QBCore.Shared.Items['mdtcitation'], "add")
-	TriggerEvent('mdt:server:AddLog', "A Fine was writen by "..OfficerFullName.." and was sent to "..PlayerName..", the Amount was $".. fine ..". (ID: "..incidentId.. ")")
+	TriggerEvent('mdt:server:AddLog', "A Fine was writen by "..OfficerFullName.." and was sent to "..PlayerName..", the Amount was 𝕍 ".. fine ..". (ID: "..incidentId.. ")")
 end
 
 -- Removes money from the players bank and gives them a citation item
@@ -1885,7 +1885,7 @@ RegisterNetEvent('mdt:server:removeMoney', function(citizenId, fine, incidentId)
 	
 	if not antiSpam then
 		if Player.Functions.RemoveMoney('bank', fine, 'lspd-fine') then
-			TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, fine.."$ was removed from your bank!")
+			TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, fine.."𝕍 was removed from your bank!")
 			giveCitationItem(src, citizenId, fine, incidentId)
 		else
 			TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, "Something went wrong!")
@@ -1983,9 +1983,9 @@ function sendIncidentToDiscord(color, name, message, footer, associatedData)
 
 
             message = message .. "\nWarrant: " .. tostring(associatedData.warrant or "No Warrants")
-            message = message .. "\nReceived Fine: $" .. tostring(associatedData.fine or "Not Found")
+            message = message .. "\nReceived Fine: 𝕍 " .. tostring(associatedData.fine or "Not Found")
             message = message .. "\nReceived Sentence: " .. tostring(associatedData.sentence or "Not Found")
-            message = message .. "\nRecommended Fine: $" .. tostring(associatedData.recfine or "Not Found")
+            message = message .. "\nRecommended Fine: 𝕍 " .. tostring(associatedData.recfine or "Not Found")
             message = message .. "\nRecommended Sentence: " .. tostring(associatedData.recsentence or "Not Found")
 
             local chargesTable = json.decode(associatedData.charges)
