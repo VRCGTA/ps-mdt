@@ -769,20 +769,19 @@ $(document).ready(() => {
     function () {
       let template = `
       <div style="color: white;">
-          <p><strong>📝 Summary:</strong></p>
-          <p><em>[Insert Report Summary Here]</em></p>
+          <p><strong>📝 事件概要:</strong></p>
+          <p><em>[ここに概要を記入]</em></p>
           <p>&nbsp;</p>
-          <p><strong>🧍 Hostage:</strong> [Name Here]</p>
+          <p><strong>🧍 人質:</strong> [Name Here]</p>
+          <p><em>[ここに人質名を記入]</em></p>
           <p>&nbsp;</p>
-          <p><strong>🗄️ Evidence Location:</strong> Stash # | Drawer #</p>
-          <p>&nbsp;</p>
-          <p><strong>🔪 Weapons/Items Confiscated:</strong></p>
-          <p><em>· [Insert List Here]</em></p>
+          <p><strong>🔪 押収物:</strong></p>
+          <p><em>・[ここに押収物を記入]</em></p>
           <p>&nbsp;</p>
           <p>-----</p>
-          <p><strong style="background-color: var(--color-1);">💸 Fine:</strong></p>
+          <p><strong>💸 罰金額:</strong></p>
           <p>&nbsp;</p>
-          <p><strong>⌚ Sentence:</strong></p>
+          <p><strong>⌚ 刑期:</strong></p>
           <p>-----</p>
       </div>
   `;
