@@ -421,7 +421,6 @@ QBCore.Functions.CreateCallback('mdt:server:GetProfileData', function(source, cb
 		licences = licencesdata,
 		dob = target.charinfo.birthdate,
 		fingerprint = target.metadata.fingerprint,
-		phone = target.charinfo.phone,
 		mdtinfo = '',
 		tags = {},
 		vehicles = {},
@@ -1131,7 +1130,6 @@ RegisterNetEvent('mdt:server:saveVehicleInfo', function(dbid, plate, imageurl, n
 										beingcollected = 0,
 										vehicle = sentVehicle,
 										officer = Player.PlayerData.charinfo.firstname.. " "..Player.PlayerData.charinfo.lastname,
-										number = Player.PlayerData.charinfo.phone,
 										time = os.time() * 1000,
 										src = src,
 									}
@@ -1683,7 +1681,6 @@ RegisterNetEvent('mdt:server:impoundVehicle', function(sentInfo, sentVehicle)
 								beingcollected = 0,
 								vehicle = sentVehicle,
 								officer = Player.PlayerData.charinfo.firstname.. " "..Player.PlayerData.charinfo.lastname,
-								number = Player.PlayerData.charinfo.phone,
 								time = os.time() * 1000,
 								src = src,
 							}
